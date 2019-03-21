@@ -4,6 +4,7 @@ def recorre(nodos,simbolos,indice,cadena,camino,total,valido):
 		if len(cadena) == 0:
 			if nodos[indice].final == True:
 				valido.append(1)
+				temp = camino + [nodos[indice].numero]
 				mostrar(temp,total,nodos)
 		else:
 			if (cadena[0] in simbolos) == False:
