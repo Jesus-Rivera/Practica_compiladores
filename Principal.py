@@ -94,7 +94,7 @@ C_automata.imprimir_tabla(nodos,simbolos)
 while True:
 	cadena = input("Ingrese la cadena que desea validar: ")
 	i = 0
-	#recorrido = Verificar.recorrer(nodos,simbolos,C_automata.posicion(nodos,inicial[0]),cadena)
-	#Verificar.mostrar(recorrido,cadena)
-	Verificar.recorres2(nodos,simbolos,C_automata.posicion(nodos,inicial[0]),cadena,[],cadena)
-	i = 0
+	validos = []
+	Verificar.recorre(nodos,simbolos,C_automata.posicion(nodos,inicial[0]),cadena,[],cadena,validos)
+	if len(validos) == 0:
+		print("\033[1;31m"+"Cadena no valida"+"\033[0;m")
